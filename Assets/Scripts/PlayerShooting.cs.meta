@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ae179bc9ea2844bf59daee4ae7498b4d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - crystalProjectilePrefab: {fileID: 4358736411568253004, guid: 5e9b487931ffb47c8adb7af17c63baf3, type: 3}
+  - shootPoint: {instanceID: 0}
+  - crystalText: {instanceID: 0}
+  - shootingSound: {instanceID: 0}
+  - crystalCollectionClip: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
