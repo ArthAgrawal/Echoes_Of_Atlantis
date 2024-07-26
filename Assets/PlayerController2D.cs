@@ -1,22 +1,19 @@
 using UnityEngine;
 
-public class PlayerController2D : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Speed at which the player moves
-    public Rigidbody2D rb; // Reference to the Rigidbody2D component
-
-    private Vector2 movement; // Store player movement input
+    public float speed = 5f; // Speed of the player
 
     void Update()
     {
-        // Get input from the player
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-    }
+        // Get input from the ASWD keys
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
 
-    void FixedUpdate()
-    {
+        // Calculate the new position
+        Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0);
+
         // Move the player
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        transform.position += movement * speed * Time.deltaTime;
     }
 }
